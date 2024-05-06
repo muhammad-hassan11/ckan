@@ -22,6 +22,8 @@ services:
       - redis
     ports:
       - "0.0.0.0:${CKAN_PORT_HOST}:${CKAN_PORT}"
+    stdin_open: true
+    tty: true
     volumes:
       - ckan_storage:/var/lib/ckan
       - ./src:/srv/app/src_extensions
